@@ -108,3 +108,49 @@ table td {
     vertical-align: middle;
     cursor: pointer;
 }
+
+/* Стилі для кнопки "Отримати інформацію" */
+#fetchButton {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745; /* Зелений фон */
+    color: white; /* Білий текст */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#fetchButton:hover {
+    background-color: #218838; /* Темніший зелений при наведенні */
+}
+
+/* Стилі для таблиці з користувачами */
+#userInfoTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#userInfoTable, #userInfoTable th, #userInfoTable td {
+    border: 1px solid #ddd; /* Світло-сірий бордер */
+}
+
+#userInfoTable th, #userInfoTable td {
+    padding: 10px;
+    text-align: center;
+}
+
+#userInfoTable th {
+    background-color: #f2f2f2; /* Світло-сірий фон для заголовків */
+}
+
+#userInfoTable img {
+    width: 100px; /* Обмеження ширини зображень */
+    height: auto;
+    max-height: 100px; /* Обмеження висоти зображень */
+}

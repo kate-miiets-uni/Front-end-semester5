@@ -229,3 +229,42 @@ function getRandomColor() {
     }
     return color;
 }
+
+// Робота з fetch та promise
+document.getElementById('fetchButton').addEventListener('click', function () {
+    fetch('https://randomuser.me/api/?results=5')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json(); // Перетворюємо відповідь у формат JSON
+        })
+        .then(data => {
+            const users = data.results;
+
+            // Очищення таблиці перед додаванням нових даних
+            for (let i = 0; i <= 4; i++) {
+                document.getElementById(`userPicture${i + 1}`).src = '';
+                document.getElementById(`userCell${i + 1}`).textContent = '';
+                document.getElementById(`userCity${i + 1}`).textContent = '';
+                document.getElementById(`userPostcode${i + 1}`).textContent = '';
+                document.getElementById(`userEmail${i + 1}`).textContent = '';
+            }
+
+            // Додавання нових даних до таблиці
+            users.forEach((user, index) => {
+                const i = index;
+                document.getElementById(`userPicture${i + 1}`).src = user.picture.medium;
+                document.getElementById(`userCell${i + 1}`).textContent = user.cell;
+                document.getElementById(`userCity${i + 1}`).textContent = user.location.city;
+                document.getElementById(`userPostcode${i + 1}`).textContent = user.location.postcode;
+                document.getElementById(`userEmail${i + 1}`).textContent = user.email;
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error); // Обробка помилок
+        })
+        .finally(() => {
+            console.log('Запит завершено'); // Виконується у будь-якому випадку
+        });
+});
