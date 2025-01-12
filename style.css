@@ -1,0 +1,39 @@
+/* Стилі для body */
+body {
+    font-family: 'Arial', sans-serif; /* Встановлюємо шрифт */
+    color: #333; /* Колір тексту */
+    background-color: #f9f9f9; /* Колір фону сторінки */
+    margin: 20px; /* Відступи */
+    padding: 20px; /* Внутрішні відступи */
+}
+
+/* Стиль для заголовків */
+h2, h3 {
+    font-family: 'Georgia', serif; /* Інший шрифт для заголовків */
+    color: #555; /* Колір заголовків */
+}
+
+/* Стиль для зображень */
+img {
+    width: 600px; /* Ширина зображення */
+    height: auto; /* Автоматична висота для збереження пропорцій */
+    margin: 20px auto; /* Центрування зображення */ }
+
+/* Початкові стилі для елементів */
+ul li, ol li {
+    margin: 5px;
+    padding: 5px;
+}
+
+/* Стиль для кнопок */
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button-container button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
