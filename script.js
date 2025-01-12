@@ -106,3 +106,126 @@ deleteImage.addEventListener('click', function() {
         imageContainer.removeChild(lastImageElement);
     }
 });
+
+// Робота з формою
+document.getElementById('myForm').addEventListener('submit', function (e){
+    e.preventDefault();
+
+    var fullName = document.getElementsByName('fullName')[0];
+    var variant = document.getElementsByName('variant')[0];
+    var phoneNumber = document.getElementsByName('phoneNumber')[0];
+    var faculty = document.getElementsByName('faculty')[0];
+    var email = document.getElementsByName('email')[0];
+
+    // Регулярні вирази для перевірки форматів
+    const fullnameRegex = /^[А-ЯІЇЄҐа-яіїєґ]+\s[А-ЯІЇЄҐа-яіїєґ].\s[А-ЯІЇЄҐа-яіїєґ].$/;
+    const variantRegex = /^\d{2}$/;
+    const phoneRegex = /^\(\d{3}\)-\d{3}-\d{2}-\d{2}$/;
+    const facultyRegex = /^[А-ЯІЇЄҐа]{4}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.com/;
+
+    // Перевірка валідності введених даних
+    let valid = true;
+
+    if(!fullnameRegex.test(fullName.value)){
+        fullName.style.borderColor = 'red';
+        valid = false;
+    }
+    else {
+        fullName.style.borderColor = 'green';
+    }
+
+    if(!variantRegex.test(variant.value)){
+        variant.style.borderColor = 'red';
+        valid = false;
+    }
+    else {
+        variant.style.borderColor = 'green';
+    }
+
+    if(!phoneRegex.test(phoneNumber.value)){
+        phoneNumber.style.borderColor = 'red';
+        valid = false;
+    }
+    else {
+        phoneNumber.style.borderColor = 'green';
+    }
+
+    if(!facultyRegex.test(faculty.value)){
+        faculty.style.borderColor = 'red';
+        valid = false;
+    }
+    else {
+        faculty.style.borderColor = 'green';
+    }
+
+    if(!emailRegex.test(email.value)){
+        email.style.borderColor = 'red';
+        valid = false;
+    }
+    else {
+        email.style.borderColor = 'green';
+    }
+
+    // Виведення результатів
+    if (valid) {
+        var newWindow = window.open("", "Result Window", "width=400,height=400");
+        newWindow.document.write(`<h2>Введені дані</h2>`);
+        newWindow.document.write(`<p><strong>ПІБ:</strong> ${fullName.value}</p>`);
+        newWindow.document.write(`<p><strong>Варіант:</strong> ${variant.value}</p>`);
+        newWindow.document.write(`<p><strong>Телефон:</strong> ${phoneNumber.value}</p>`);
+        newWindow.document.write(`<p><strong>Факультет:</strong> ${faculty.value}</p>`);
+        newWindow.document.write(`<p><strong>Email:</strong> ${email.value}</p>`); } else {
+        alert('Будь ласка, виправте помилки у введених даних.');
+    }
+})
+
+// Робота з таблицею
+document.addEventListener('DOMContentLoaded', (event) => {
+    var table = document.getElementById('myTable');
+    var variantNumber = 7; // Номер варіанта 7
+
+    // Генерація таблиці 6х6
+    for (var i = 0; i < 6; i++) {
+        var row = table.insertRow();
+        for (var j = 0; j < 6; j++) {
+            var cell = row.insertCell();
+            cell.innerHTML = i * 6 + j + 1;
+
+            // Наведення на клітинку
+            cell.onmouseover = function() {
+                if (parseInt(this.innerHTML) === variantNumber) {
+                    this.style.backgroundColor = getRandomColor();
+                }
+            };
+
+            // Клік на клітинці
+            cell.onclick = function() {
+                if (parseInt(this.innerHTML) === variantNumber) {
+                    var color = document.getElementById('colorPicker').value;
+                    this.style.backgroundColor = color;
+                }
+            };
+
+            // Подвійний клік на клітинці
+            cell.ondblclick = function() {
+                var selectedRow = this.parentNode.rowIndex;
+                for (var k = selectedRow; k < table.rows.length; k += 2) {
+                    for (var l = 0; l < table.rows[k].cells.length; l++) {
+                        table.rows[k].cells[l].style.backgroundColor = getRandomColor();
+                    }
+                }
+            };
+        }
+    }
+});
+
+// Функція для генерації випадкового кольору
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
