@@ -1,0 +1,737 @@
+/* Основні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .logo a {
+    color: #060b49;
+    text-decoration: none;
+}
+
+.icon-study {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #060b49;
+    text-decoration: none;
+}
+
+.header-home {
+    color: #cf9301;
+}
+
+.button-search {
+    border: none;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.icon-search {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.banner {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    color: #060b49;
+    background-image: url('images/students.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.banner h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.banner-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.banner-button-learn-more {
+    background-color: #060b49;
+    color: #cf9301;
+}
+
+.banner-button-learn-more:hover {
+    background-color: #040833;
+}
+
+.banner-button-see-courses {
+    background-color: #cf9301;
+    color:  #060b49;
+}
+
+.banner-button-see-courses:hover {
+    background-color: #af7d03;
+}
+
+.features {
+    padding: 50px 20px;
+    background-color: #f8f6f6;
+    text-align: center;
+}
+
+.features-section-header {
+    margin-bottom: 30px;
+}
+
+.features-section-header h2 {
+    color: #060b49;
+}
+
+.features-section-header p {
+    color: rgba(31, 33, 39, 0.56);
+    font-style: italic;
+    font-size: 15px;
+}
+
+.feature-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.feature-card {
+    width: 30%;
+    text-align: left;
+    background-color: rgba(236, 242, 244, 0.61);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.feature-card .icon-placeholder {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-card .icon-placeholder img {
+    height: 50px;
+    width: 50px;
+}
+
+.feature-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    color: rgba(31, 33, 39, 0.7);
+}
+
+.feature-card p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: rgba(31, 33, 39, 0.56);
+}
+
+.feature-card .card-line {
+    height: 2px;
+    background-color: #ddd;
+    margin-top: 10px;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+.courses {
+    padding: 50px 20px;
+    background-color: #f8f6f6;
+}
+
+.courses-header {
+    background-color: #f8f6f6;
+    margin-bottom: 30px;
+}
+
+.courses-header h1 {
+    color: #060b49;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.courses-header p {
+    color: rgba(31, 33, 39, 0.56);
+    font-style: italic;
+}
+
+.course-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.course-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.course-card img {
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.price-circle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #cf9301;
+    color: #060b49;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.course-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #060b49;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-card button:hover {
+    background-color: #050832;
+}
+
+.course-card h3 {
+    color: #060b49;
+    margin: 15px 0;
+}
+
+.course-card p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.mentor-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mentor-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.mentor-info span {
+    font-size: 14px;
+    color: #333;
+}
+
+.course-stats {
+    display: flex;
+    align-items: center;
+}
+
+.course-stats span {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.course-stats i {
+    margin-right: 5px;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+    .course-card {
+        margin-bottom: 20px;
+    }
+
+    .mentor-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .course-stats {
+        margin-top: 10px;
+    }
+}
+
+
+.register {
+    padding: 50px 20px;
+    background-color: #060b49;
+    text-align: left;
+}
+
+.register h1 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.register p {
+    color: rgba(255, 255, 255, 0.63);
+    font-style: italic;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.register-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.timer {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-card {
+    background-color: #44668e;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.53);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 80px;
+    min-height: 60px;
+    max-width: 180px;
+    height: auto;
+    flex-basis: calc(25% - 20px);
+}
+
+.time-value {
+    font-size: 24px;
+    color: #fff;
+}
+
+.register-form {
+    flex: 2;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.register-form h3 {
+    color: #060b49;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.register-form p {
+    color: rgba(31, 33, 39, 0.56);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.register-form button {
+    padding: 10px;
+    background-color: #cf9301;
+    color: #060b49;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #050a39;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+    .register-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timer-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .time-card {
+        width: 45%;
+        margin: 10px 0;
+    }
+
+    .register-form {
+        width: 100%;
+        padding-left: 0;
+        order: 1;
+    }
+}
+
+.trainers {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.trainers-header {
+    margin-bottom: 30px;
+}
+
+.trainers-header h1 {
+    color: #060b49;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.trainers-header p {
+    color: rgba(31, 33, 39, 0.56);
+    font-style: italic;
+}
+
+.trainers-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.trainer-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: left;
+    flex-basis: calc(25% - 10px); /* Змінюється у залежності від ширини сторінки */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.trainer-card h3 {
+    color: #060b49;
+    margin: 10px 0;
+}
+
+.trainer-card p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.trainer-icons .icon {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.trainer-icons .facebook {
+    background-image: url('icons/facebook.png');
+}
+
+.trainer-icons .linkedin {
+    background-image: url('icons/linkedin.png');
+}
+
+.trainer-icons .twitter {
+    background-image: url('icons/twitter.png');
+}
+
+.trainer-icons .instagram {
+    background-image: url('icons/instagram.png');
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+    .trainers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trainer-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.events {
+    padding: 50px 20px;
+    background-color: #060b49;
+    text-align: center;
+}
+
+.events-header {
+    margin-bottom: 30px;
+    background-color: #060b49;
+}
+
+.events-header h1 {
+    color: #eaeaea;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.events-header p {
+    color: rgba(234, 234, 234, 0.6);
+    font-style: italic;
+}
+
+.events-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    position: relative;
+    flex-basis: calc(50% - 10px);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.event-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.event-header {
+    display: flex;
+    width: 100%;
+    border-left: 2px solid white;
+    padding-left: 10px;
+}
+
+.event-date {
+    flex-basis: 20%;
+    text-align: center;
+    border-right: 2px solid white;
+    padding-right: 10px;
+}
+
+.event-day {
+    font-size: 24px;
+    display: block;
+}
+
+.event-month {
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.icon-clock .icon-location {
+    width: 15px;
+    height: 15px;
+}
+
+.event-details {
+    flex-basis: 80%;
+    padding-left: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.event-details p {
+    margin: 0;
+}
+
+.event-description p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.event-description button {
+    padding: 10px 20px;
+    background-color: #060b49;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event-description button:hover {
+    background-color: #03062e;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+    .events-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .event-overlay {
+        width: calc(100% - 20px);
+        top: 10px;
+        right: 10px;
+    }
+
+    .event-details {
+        padding-left: 5px;
+    }
+}
+
+.footer {
+    background-color: #060b49;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-content p:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-content a {
+    color: #ffa500;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
